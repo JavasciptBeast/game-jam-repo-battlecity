@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://y6pqts55l8n4"]
+
+[ext_resource type="Script" uid="uid://bn4crbhme03kl" path="res://playertank.gd" id="1_oa3n8"]
+[ext_resource type="Texture2D" uid="uid://dmc6lcthn6f3e" path="res://assets/kenney_top-down-tanks-redux/PNG/Default size/tankBody_blue.png" id="2_qmgpy"]
+[ext_resource type="Texture2D" uid="uid://b4pefeckwk0h3" path="res://assets/kenney_top-down-tanks-redux/PNG/Default size/tankDark_barrel1.png" id="3_kox24"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oa3n8"]
+radius = 20.02372
+height = 66.020035
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1625423354]
+script = ExtResource("1_oa3n8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=753540534]
+position = Vector2(-18, 5)
+rotation = 3.1542535
+shape = SubResource("CapsuleShape2D_oa3n8")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1521276204]
+zoom = Vector2(3, 3)
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1547723249]
+position = Vector2(-20, 3.999998)
+texture = ExtResource("2_qmgpy")
+
+[node name="Barrel" type="Sprite2D" parent="Icon" unique_id=907650562]
+position = Vector2(-0.39922714, 22.996538)
+texture = ExtResource("3_kox24")
